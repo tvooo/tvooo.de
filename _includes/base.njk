@@ -1,0 +1,47 @@
+---
+title: Tim von Oldenburg
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Main">
+        <div role="banner">
+          <div class="blob"></div>
+          <a href="/">tim von oldenburg</a>
+        </div>
+        <ul>
+        <li>
+        <a href="/">writing</a>
+        </li>
+        <li>
+        <a href="/about">about</a>
+        </li>
+        </ul>
+
+      </nav>
+    </header>
+    <main>
+      {{ content | safe }}
+    </main>
+
+    <footer><div class="blob"></div>
+      © 2020 Tim von Oldenburg •
+      <nav aria-label="Social Links"><a href="/">tvooo.de</a> • <a href="https://github.com/tvooo/">Github</a> • <a href="https://twitter.com/timvonoldenburg">Twitter</a></nav>
+    </footer>
+  </body>
+</html>
+

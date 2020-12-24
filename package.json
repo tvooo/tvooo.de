@@ -1,0 +1,13 @@
+{
+  "name": "tvooo.de",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn run eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "date-fns": "^2.16.1"
+  }
+}

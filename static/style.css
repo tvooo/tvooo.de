@@ -1,0 +1,159 @@
+:root {
+  --color-blue: #007ce0;
+  --color-text: #000e1a;
+  --color-bg: #f8f8f8;
+  --color-bg-alt: white;
+  --color-grey: #666;
+
+  --gradient: linear-gradient(
+    60deg,
+    #3d3393 0%,
+    var(--color-blue) 50%,
+    #35eb93 100%
+  );
+
+  --gradient2: linear-gradient(
+    60deg,
+    #3d3393 0%,
+    var(--color-blue) 40%,
+    #35eb93 100%
+  );
+}
+
+.dark {
+  --color-text: #f8f8f8;
+  --color-bg: #000e1a;
+  --color-bg-alt: black;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 115%;
+  margin: 0;
+  color: var(--color-text);
+  background: var(--color-bg-alt);
+}
+
+a {
+  border-bottom: 0.2rem solid var(--color-text);
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: bold;
+}
+a:hover {
+  border-color: var(--color-blue);
+}
+
+main {
+  /* max-width: 840px; */
+  margin: 0px 8rem;
+  padding: 4rem 0;
+}
+
+p {
+  margin: 0;
+}
+
+.callout {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+header,
+footer {
+  padding: 4rem 8rem;
+  background: var(--color-bg);
+}
+
+header a,
+footer a {
+  border-color: transparent;
+}
+
+.intro {
+  background-image: var(--gradient);
+  padding: 2rem;
+}
+.intro p {
+  display: inline-block;
+  padding: 0.2em;
+  background: white;
+  font-weight: bold;
+}
+
+p {
+  max-width: 35rem;
+}
+
+small {
+  color: var(--color-grey);
+}
+
+.blob {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-image: var(--gradient);
+  transition: all 0.2s 0s ease;
+
+  margin: 0 0 2em 0;
+}
+.blob:hover {
+  /* background-image: var(--gradient2); */
+  filter: grayscale(100%);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header li {
+  margin: 0 0.5em;
+}
+
+ul.posts {
+  list-style: none;
+  padding: 0;
+}
+
+.posts li {
+  margin: 0 0 0.5em 0;
+}
+
+.posts li small {
+  width: 6em;
+  display: inline-block;
+  text-align: right;
+  margin-right: 0.2em;
+}
+
+footer nav {
+  display: inline-block;
+}
+
+footer .blob {
+  display: inline-block;
+  margin: 0 auto 0 0;
+  filter: grayscale();
+
+  /* height: 1em;
+  width: 1em; */
+}
+
+footer {
+  display: flex;
+  align-items: center;
+}
