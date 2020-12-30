@@ -3,15 +3,10 @@ layout: base
 ---
 
 <section>
-  <p>
-    Hej there, I'm <a href="/about">Tim</a>, a frontend engineer based in Utrecht.
-    <br />
-    I currently make medical research better at
-    <a href="https://www.castoredc.com/">Castor</a>.
-  </p>
+  {% include "intro.njk" %}
 </section>
 
-<h2>Writing</h2>
+<h2 class="heading">Writing</h2>
 <ul class="posts">
   {%- for post in collections.blog | reverse -%}
   <li>
