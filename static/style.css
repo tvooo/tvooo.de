@@ -158,7 +158,8 @@ footer {
   align-items: center;
 }
 
-.heading {
+.heading,
+h2[content="Table of contents"] {
   font-size: 1rem;
   font-variant-caps: all-small-caps;
   color: var(--color-grey);
