@@ -1,11 +1,11 @@
 ---
-layout: post
+layout: til
 date: 2020-12-23
 tags: [blog, til]
-title: TIL of espanso, a cross-platform text expander
+til: of espanso, a cross-platform text expander
+# eleventyComputed:
+#   title: "TIL {{title}}"
 ---
-
-# TIL of espanso, a cross-platform text expander
 
 If you're on a Mac, you may be familiar with [TextExpander](https://textexpander.com/). It's a small program that allows you to type a shortcut and then automatically replace it with content you previously defined.
 
