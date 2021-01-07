@@ -174,11 +174,11 @@ baseurl: "https://www.tvooo.de"
       <nav aria-label="Main">
         <div role="banner">
           <div class="blob" role="presentation"></div>
-          <a href="/">tim von oldenburg</a>
+          <a href="/" class="{% if "/" == page.url %}active{% endif %}">tim von oldenburg</a>
         </div>
         <ul>
           <li>
-            <a href="/about">about</a>
+            <a href="/about" class="{% if "/about/" == page.url %}active{% endif %}">about</a>
           </li>
         </ul>
       </nav>
