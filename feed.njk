@@ -3,13 +3,12 @@
   "permalink": "feed.xml",
   "eleventyExcludeFromCollections": true,
   "metadata": {
-    "title": "My Blog about Boats",
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "title": "Tim von Oldenburg",
     "url": "https://www.tvooo.de/",
     "feedUrl": "https://www.tvooo.de/feed.xml",
     "author": {
       "name": "Tim von Oldenburg",
-      "email": "tvooo@tvooo.de"
+      "email": "hej@tvooo.de"
     }
   }
 }
@@ -17,7 +16,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ metadata.title }}</title>
-  <subtitle>{{ metadata.subtitle }}</subtitle>
+  {# <subtitle>{{ metadata.subtitle }}</subtitle> #}
   <link href="{{ metadata.feedUrl }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
   <updated>{{ collections.blog | rssLastUpdatedDate }}</updated>
