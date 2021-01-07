@@ -1,5 +1,6 @@
 ---
 title: Tim von Oldenburg
+description: Tim von Oldenburg is a frontend engineer based in Utrecht.
 ---
 
 <!DOCTYPE html>
@@ -8,8 +9,24 @@ title: Tim von Oldenburg
     <title>{{ title }}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Tim von Oldenburg is a frontend engineer based in Utrecht" />
+
+    <!-- Primary meta tags -->
+    <meta name="description" content="{{ description }}" />
     <meta name="keywords" content="code, design, javascript, react, portfolio, ux" />
+    <meta name="title" content="{{ title }}">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | url }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="/static/share.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ page.url | url }}">
+    <meta property="twitter:title" content="{{ title }}">
+    <meta property="twitter:description" content="{{ description }}">
+    <meta property="twitter:image" content="/static/share.png">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://plausible.io" />
     <link rel="stylesheet" href="/static/style.css" />
