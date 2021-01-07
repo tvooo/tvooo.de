@@ -1,0 +1,98 @@
+---
+layout: base
+tags: [pages]
+title: Bookshelf
+books:
+  currently:
+    - title: The Life-Changing Magic of Tidying Up
+      subtitle: The Japanese Art of Decluttering and Organizing 
+      author: Marie Kondō
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1418767178l/22318578.jpg"
+    - title: A Promised Land
+      author: Barack Obama
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1600357110l/55361205._SY475_.jpg"
+  y2020:
+    - title: The Martian
+      author: Andy Weir
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1413706054l/18007564.jpg"
+    - title: Almost Everything
+      subtitle: Notes on Hope
+      author: Anne Lamott
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1539780476l/39203790.jpg"
+    - title: Atomic Habits
+      subtitle: An Easy & Proven Way to Build Good Habits & Break Bad Ones
+      author: James Clear
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1595278069l/54615491._SY475_.jpg"
+    - title: Bloof of Elves 🎧
+      author: Andrzej Sapkowski
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1589998653l/6043781._SX318_.jpg"
+    - title: Deep Work
+      subtitle: Rules for Focused Success in a Distracted World
+      author: Cal Newport
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1447957962l/25744928._SY475_.jpg"
+    - title: Future Ethics
+      author: Cennydd Bowles
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1537730826l/41975945._SY475_.jpg"
+    - title: Getting Things Done 🎧
+      subtitle: The Art of Stress-Free Productivity
+      author: David Allen
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1427634749l/22573850.jpg"
+    - title: How To Kill A Narcissist
+      author: JH Simon
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1485956724l/33931306.jpg"
+    - title: Silence
+      subtitle: The Power of Quiet in a World Full of Noise
+      author: Thich Nhat Hanh
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1417986000l/23149937.jpg"
+    - title: The Art Of Frugal Hedonism
+      subtitle: A Guide to Spending Less While Enjoying Everything More 
+      author: Annie Raser-Rowland & Adam Grubb
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1476696732l/30259572._SX318_.jpg"
+    - title: The Subtle Art Of Not Giving A F*ck
+      subtitle: A Counterintuitive Approach to Living a Good Life
+      author: Mark Manson
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1465761302l/28257707.jpg"
+    - title: The Three-Body Problem 🎧
+      author: Liu Cixin
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1415428227l/20518872.jpg"
+    - title: Utopia for Realists
+      author: Rutger Bregman
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1512047221l/36690518._SY475_.jpg"
+    - title: Why We Sleep 🎧
+      subtitle: The New Science of Sleep and Dreams
+      author: Matthew Walker
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1514887741l/36303871._SY475_.jpg"
+---
+
+<section>
+  <h1>What I am reading</h1>
+  <p>As a kid, in my youth, and during my studies I used to read a lot for pleasure — but with a full-time job I rarely take the time.</p>
+  <p>So in early 2020, I made a decision to read more books.</p>
+  <p>This part of my site serves as a reminder to myself and an open bookshelf to everyone else. Enjoy!</p>
+  <h2>Currently <small>({{books.currently.length}})</small></h2>
+  <ul class="books">
+    {%- for book in books.currently -%}
+      <li class="book">
+        <img src="{{ book.image }}" />
+        <p class="title"><strong>{{ book.title }}</strong></p>
+        <p class="subtitle"><small>{{ book.subtitle }}</small></p>
+        <p class="author">{{ book.author }}</p>
+      </li>
+    {%- endfor -%}
+  </ul>
+  <h3></h3>
+  
+  {# <h2>2021</h2> #}
+  
+  <h2>2020 <small>({{books.y2020.length}})</small></h2>
+  <ul class="books">
+    {%- for book in books.y2020 -%}
+      <li class="book">
+        <img src="{{ book.image }}" />
+        <p class="title"><strong>{{ book.title }}</strong></p>
+        <p class="subtitle"><small>{{ book.subtitle }}</small></p>
+        <p class="author">{{ book.author }}</p>
+      </li>
+    {%- endfor -%}
+  </ul>
+</section>

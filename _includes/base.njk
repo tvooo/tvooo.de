@@ -7,7 +7,7 @@ baseurl: "https://www.tvooo.de"
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ title }}</title>
+    <title>{{ title }}{% if "/" != page.url %} - Tim von Oldenburg{% endif %}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -177,9 +177,11 @@ baseurl: "https://www.tvooo.de"
           <a href="/" class="{% if "/" == page.url %}active{% endif %}">tim von oldenburg</a>
         </div>
         <ul>
-          <li>
-            <a href="/about" class="{% if "/about/" == page.url %}active{% endif %}">about</a>
-          </li>
+          {%- for p in collections.pages -%}
+            <li {% if p.url == page.url %}aria-current="page"{% endif %}>
+              <a href="{{ p.url }}">{{ p.data.title }}</a>
+            </li>
+            {%- endfor -%}
         </ul>
       </nav>
     </header>

@@ -95,6 +95,7 @@ header ul {
 }
 
 header li {
+  text-transform: lowercase;
   margin: 0 1em 0 0;
 }
 header li:last-child {
@@ -139,7 +140,8 @@ a {
   font-weight: bold;
 }
 a:hover,
-a.active {
+a.active,
+[aria-current="page"] a {
   border-color: var(--color-blue);
 }
 
@@ -227,4 +229,39 @@ h2[content="Table of contents"] {
   color: var(--color-grey);
   margin-top: 4rem;
   margin-bottom: 1rem;
+}
+
+.books {
+  display: grid;
+  /* grid-auto-columns: 15rem;
+  grid-auto-rows: 15rem; */
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  column-gap: 2rem;
+  row-gap: 2rem;
+
+  list-style: none;
+  padding: 0;
+}
+
+.book {
+  background: var(--color-bg);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 0.4rem 0.1rem rgba(0, 0, 0, 0.1);
+  /* padding: 0.5rem; */
+}
+.book img {
+  width: 100%;
+  filter: grayscale(50%);
+  /* margin-top: -0.5rem;
+  margin-top: -0.5rem; */
+}
+.book .title {
+  margin: 0.5rem 0.5rem 0 0.5rem;
+}
+.book .subtitle {
+  margin: 0 0.5rem;
+}
+.book .author {
+  margin: 0.5rem;
 }
