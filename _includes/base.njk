@@ -154,5 +154,13 @@ title: Tim von Oldenburg
       </div>
     </footer>
   </body>
+  <script>
+    /* Remove previously installed Service Workers */
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      for(let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  </script>
 </html>
 
