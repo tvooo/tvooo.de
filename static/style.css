@@ -154,6 +154,13 @@ p + p {
   margin-top: 1em;
 }
 
+img {
+  max-width: 35rem;
+}
+li {
+  max-width: 35rem;
+}
+
 small {
   color: var(--color-grey);
 }
@@ -206,6 +213,12 @@ ul.posts {
   margin: 0 0 0.5em 0;
 }
 @media screen and (min-width: 600px) {
+  ul {
+    padding-left: 0;
+  }
+  ul ul {
+    padding-left: 1.5rem;
+  }
   .posts li {
     flex-direction: row;
   }

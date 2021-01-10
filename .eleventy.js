@@ -6,6 +6,8 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAbbr = require("markdown-it-abbr");
 const markdownItEmoji = require("markdown-it-emoji");
+const markdownItDeflist = require("markdown-it-deflist");
+const markdownItFootnote = require("markdown-it-footnote");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("static");
@@ -21,6 +23,8 @@ module.exports = function (eleventyConfig) {
       .use(markdownItAnchor)
       .use(markdownItAbbr)
       .use(markdownItEmoji)
+      .use(markdownItDeflist)
+      .use(markdownItFootnote)
   );
 
   eleventyConfig.addPlugin(pluginRss);
