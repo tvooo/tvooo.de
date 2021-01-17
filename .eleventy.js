@@ -11,24 +11,30 @@ const markdownItDeflist = require("markdown-it-deflist");
 const markdownItFootnote = require("markdown-it-footnote");
 
 async function imageShortcode(src, alt, sizes = "100vw") {
-  if(alt === undefined) {
+  if (alt === undefined) {
     // You bet we throw an error on missing alt (alt="" works okay)
     throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
   }
 
   let metadata = await Image(src, {
     widths: [350, 700, 1400],
-    formats: ['webp', 'jpeg'],
+    formats: ["webp", "jpeg"],
     outputDir: "./_site/images/",
-    urlPath: "/images/"
+    urlPath: "/images/",
   });
 
   let lowsrc = metadata.jpeg[0];
 
   return `<picture>
-    ${Object.values(metadata).map(imageFormat => {
-      return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.srcset).join(", ")}" sizes="${sizes}">`;
-    }).join("\n")}
+    ${Object.values(metadata)
+      .map((imageFormat) => {
+        return `  <source type="${
+          imageFormat[0].sourceType
+        }" srcset="${imageFormat
+          .map((entry) => entry.srcset)
+          .join(", ")}" sizes="${sizes}">`;
+      })
+      .join("\n")}
       <img
         src="${lowsrc.url}"
         alt="${alt}"
@@ -68,14 +74,13 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-  eleventyConfig.addNunjucksAsyncFilter("imageUrl", function(url, callback) {
+  eleventyConfig.addNunjucksAsyncFilter("imageUrl", function (url, callback) {
     Image(url, {
       widths: [1400],
-      formats: ['webp', 'jpeg'],
+      formats: ["webp", "jpeg"],
       outputDir: "./_site/images/",
-      urlPath: "/images/"
-    }).then(function(metadata) {
-      console.log(url, callback)
+      urlPath: "/images/",
+    }).then(function (metadata) {
       callback(null, metadata.jpeg[0].url);
     });
   });
