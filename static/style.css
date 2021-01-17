@@ -217,10 +217,14 @@ ul.posts {
   margin: 0 0 0.5em 0;
 }
 @media screen and (min-width: 600px) {
-  ul {
+  ul,
+  ol {
     padding-left: 0;
   }
-  ul ul {
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
     padding-left: 1.5rem;
   }
   .posts li {
@@ -302,14 +306,13 @@ h2[content="Table of contents"] {
 }
 
 .title-image figcaption {
-  /* color: var(--color-grey); */
   font-style: italic;
-  /* text-align: center; */
   margin: 0.5em;
 }
 
 .article p,
 .article ul,
+.article ol,
 .article h1,
 .article h2,
 .article h3 {
@@ -338,4 +341,13 @@ aside {
 
 aside {
   margin-top: var(--margin-vertical);
+}
+
+code {
+  background: var(--color-bg);
+  border: 1px solid black;
+}
+
+.footnote-ref a {
+  border-color: transparent;
 }
