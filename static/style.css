@@ -172,7 +172,7 @@ small {
 /*
  * Special elements
  */
-.callout {
+.callout, blockquote {
   font-size: 1.2em;
   font-style: italic;
 }
@@ -345,7 +345,15 @@ aside {
 
 code {
   background: var(--color-bg);
-  border: 1px solid black;
+}
+
+pre {
+  max-width: 40rem;
+}
+
+pre code {
+  display: block;
+  padding: 1em;
 }
 
 .footnote-ref a {
