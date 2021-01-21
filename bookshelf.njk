@@ -4,17 +4,18 @@ tags: [pages]
 title: Bookshelf
 books:
   currently:
-    - title: Range
+    - title: Range 🎧
       subtitle: Why Generalists Triumph in a Specialized World
       author: David Epstein
       image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1550048292l/41795733.jpg"
+    - title: A Promised Land
+      author: Barack Obama
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1600357110l/55361205._SY475_.jpg"
+  y2021:
     - title: The Life-Changing Magic of Tidying Up
       subtitle: The Japanese Art of Decluttering and Organizing 
       author: Marie Kondō
       image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1418767178l/22318578.jpg"
-    - title: A Promised Land
-      author: Barack Obama
-      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1600357110l/55361205._SY475_.jpg"
   y2020:
     - title: The Martian
       author: Andy Weir
@@ -86,7 +87,17 @@ books:
   </ul>
   <h3></h3>
   
-  {# <h2>2021</h2> #}
+  <h2>2021 <small>({{books.y2021.length}})</small></h2>
+  <ul class="books">
+    {%- for book in books.y2021 -%}
+      <li class="book">
+        <img src="{{ book.image }}" />
+        <p class="title"><strong>{{ book.title }}</strong></p>
+        <p class="subtitle"><small>{{ book.subtitle }}</small></p>
+        <p class="author">{{ book.author }}</p>
+      </li>
+    {%- endfor -%}
+  </ul>
   
   <h2>2020 <small>({{books.y2020.length}})</small></h2>
   <ul class="books">
