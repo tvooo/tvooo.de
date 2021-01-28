@@ -36,7 +36,7 @@ I am not sure yet what to make of this site. Evidently, what you are reading rig
 
 As with any habit, I reckon it's because I didn't see the benefits of it quickly enough. This time, therefore, I will not force it, but will take it as it comes and chiefly try to blog _for myself_. Specifically, I will try to record the small things I've learned and made, and thus create a sort of journal I can return to.
 
-The topics that typically occupy my mind are in the realms of productivity, tooling, the intersection of engineering and design, and life as a developer outside of the technical; but there are personal things I'd like to share, too, [such as the books I'm reading](/bookshelf).
+The topics that typically occupy my mind are in the realms of productivity, tooling, the intersection of engineering and design, and life as a developer outside of the technical; but there are personal things I'd like to share, too, [such as the books I'm reading](/bookshelf/).
 
 In the meantime, while I figure all this out, why don't you take a seat? Please make yourself at home. Bring friends. _Wil je een kopje koffie?_
 
