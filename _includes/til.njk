@@ -4,7 +4,7 @@ eleventyComputed:
   title: "TIL {{til}}"
 ---
 
-<section>
+<section class="til">
     {{ page.date | readableDate }}
     <h1><abbr title="Today I Learned">TIL</abbr> {{ til }}</h1>
     {{ content | safe }}

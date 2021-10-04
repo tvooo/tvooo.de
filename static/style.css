@@ -327,6 +327,12 @@ h2[content="Table of contents"] {
   margin-top: 0em;
 }
 
+.til h2 {
+  /* text-align: center; */
+  font-size: 1.5rem;
+  /* margin-top: 0em; */
+}
+
 [role="banner"] a {
   font-weight: 400;
 }
