@@ -345,7 +345,7 @@ aside {
   font-size: 1rem;
 }
 
-aside {
+img + aside {
   margin-top: var(--margin-vertical);
 }
 
