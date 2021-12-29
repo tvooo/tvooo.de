@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "build": "yarn run eleventy",
-    "dev": "yarn run eleventy --watch",
+    "dev": "yarn run eleventy --serve",
     "check-links": "yarn run check-html-links _site",
     "postinstall": "husky install"
   },
