@@ -11,5 +11,10 @@ layout: base
    {{ page.date | longDate }}
    </aside>
    <h1>{{ title }}</h1>
+   {% if toc %}
+   <details>
+      <summary>Table of Contents</summary>
+      {{ content | toc | safe }}
+   </details>{% endif %}
    {{ content | safe }}
 </section>

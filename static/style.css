@@ -23,6 +23,8 @@
 
   --margin-sides: 2rem;
   --margin-vertical: 4rem;
+
+  --page-width: 1000px;
 }
 
 /*
@@ -97,6 +99,7 @@ header ul {
 header li {
   text-transform: lowercase;
   margin: 0 1em 0 0;
+  font-weight: bold;
 }
 header li:last-child {
   margin: 0;
@@ -124,7 +127,7 @@ footer p {
 header > *,
 main > *,
 footer > * {
-  max-width: 1400px;
+  max-width: var(--page-width);
   /* margin: 0 auto; */
   margin-left: auto;
   margin-right: auto;
@@ -134,10 +137,9 @@ footer > * {
  * Base elements
  */
 a {
-  border-bottom: 0.2rem solid var(--color-text);
+  border-bottom: 0.125rem solid var(--color-text);
   text-decoration: none;
   color: var(--color-text);
-  font-weight: bold;
 }
 a:hover,
 a.active,
@@ -153,13 +155,20 @@ p {
   margin-right: auto; */
   margin-top: 0;
   margin-bottom: 0;
+  line-height: 1.4em;
 }
 p + p {
   margin-top: 1em;
 }
 
+p, li {
+  line-height: 1.4em;
+}
+
 img {
+  display: block;
   max-width: 35rem;
+  max-width: 100%;
 }
 li {
   max-width: 35rem;
@@ -183,27 +192,24 @@ footer a {
 }
 
 .intro {
-  background-image: var(--gradient);
-  padding: 2rem;
-}
-.intro p {
-  display: inline-block;
-  padding: 0.2em;
-  background: white;
-  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .blob {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 1rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 1.2rem;
   background-image: var(--gradient);
   transition: all 0.2s 0s ease;
 
   margin: 0 0 2em 0;
 }
 .blob:hover {
+  border-radius: 0.4rem;
   filter: grayscale(100%);
+}
+.blob:active {
+  border-radius: 0.8rem 0.4rem 0.4rem 0.4rem;
 }
 
 ul.posts {
@@ -214,33 +220,7 @@ ul.posts {
 .posts li {
   display: flex;
   flex-direction: column;
-  margin: 0 0 0.5em 0;
-}
-@media screen and (min-width: 600px) {
-  ul,
-  ol {
-    padding-left: 0;
-  }
-  ul ul,
-  ul ol,
-  ol ul,
-  ol ol {
-    padding-left: 1.5rem;
-  }
-  .posts li {
-    flex-direction: row;
-  }
-  .posts li small {
-    text-align: right;
-  }
-}
-
-.posts li small {
-  flex-shrink: 0;
-  display: inline-block;
-  width: 6em;
-  margin-right: 0.3rem;
-  line-height: 1.7rem;
+  margin: 0 0 1.5em 0;
 }
 
 .heading,
@@ -285,14 +265,14 @@ h2[content="Table of contents"] {
 .title-image {
   margin: 0;
   /* margin-top: -8rem; */
-  max-width: 1400px;
+  max-width: var(--page-width);
   margin-bottom: 4rem;
   /* margin-left: auto; */
 }
 
 .title-image img {
   width: 100%;
-  max-width: 1400px;
+  max-width: var(--page-width);
   display: block;
 }
 
@@ -315,7 +295,8 @@ h2[content="Table of contents"] {
 .article ol,
 .article h1,
 .article h2,
-.article h3 {
+.article h3,
+.article details {
   max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
@@ -331,10 +312,6 @@ h2[content="Table of contents"] {
   /* text-align: center; */
   font-size: 1.5rem;
   /* margin-top: 0em; */
-}
-
-[role="banner"] a {
-  font-weight: 400;
 }
 
 figcaption,
@@ -364,4 +341,30 @@ pre code {
 
 .footnote-ref a {
   border-color: transparent;
+}
+
+hr.footnotes-sep {
+  background-color: var(--color-bg);
+  border: none;
+  padding: 2px;
+  max-width: 40rem;
+  margin-top: var(--margin-vertical);
+  margin-bottom: var(--margin-vertical);
+}
+
+sup {
+  font-size: 0.6em;
+  line-height: 1;
+}
+
+details {
+  background: var(--color-bg);
+  padding: 1em;
+  box-sizing: border-box;
+  border-radius: 0.4rem;
+  margin-bottom: 2rem;
+}
+
+.toc ol {
+  list-style-type: disc;
 }
