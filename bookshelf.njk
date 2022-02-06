@@ -4,19 +4,23 @@ tags: [pages]
 title: Bookshelf
 books:
   currently:
-    - title: Mental Health at Work
-      author: James Routledge
-      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1634331199l/56587393.jpg"
     - title: How To Take Smart Notes
       author: Sönke Ahrens
       image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1488937626l/34507927._SY475_.jpg"
-    - title: The Monk of Mokha
-      author: Dave Eggers
-      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1515774725l/35215524._SY475_.jpg"
     - title: An Elegant Puzzle
       subtitle: Systems of Engineering Management
       author: Will Larson
       image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1556221385l/45303387._SX318_.jpg"
+    - title: Designing Data-Intensive Applications
+      author: Martin Kleppmann
+      image: "https://dataintensive.net/images/book-cover.png"
+  y2022:
+    - title: The Monk of Mokha 🎧
+      author: Dave Eggers
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1515774725l/35215524._SY475_.jpg"
+    - title: Mental Health at Work
+      author: James Routledge
+      image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1634331199l/56587393.jpg"
   y2021:
     - title: The Gifts of Imperfection 🎧
       author: Brené Brown
@@ -132,7 +136,17 @@ books:
       </li>
     {%- endfor -%}
   </ul>
-  <h3></h3>
+  <h2>2022 <small>({{books.y2022.length}})</small></h2>
+  <ul class="books">
+    {%- for book in books.y2022 -%}
+      <li class="book">
+        <img src="{{ book.image }}" />
+        <p class="title"><strong>{{ book.title }}</strong></p>
+        <p class="subtitle"><small>{{ book.subtitle }}</small></p>
+        <p class="author">{{ book.author }}</p>
+      </li>
+    {%- endfor -%}
+  </ul>
   
   <h2>2021 <small>({{books.y2021.length}})</small></h2>
   <ul class="books">
