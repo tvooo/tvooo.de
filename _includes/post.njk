@@ -5,7 +5,7 @@ layout: base
 <section class="article">
    {% if image %}<figure class="title-image">
       {% image image.url, image.alt, "(min-width: 30em) 50vw, 100vw" %}
-      <figcaption>{{ image.description }} Photo by <a href="{{ image.unsplash.link }}">{{ image.unsplash.user }}</a> on <a href="https://unsplash.com">Unsplash</a>.</figcaption>
+      <figcaption>{{ image.description }} {% if image.unsplash %}Photo by <a href="{{ image.unsplash.link }}">{{ image.unsplash.user }}</a> on <a href="https://unsplash.com">Unsplash</a>.{% endif %}</figcaption>
    </figure>{% endif %}
    <aside>
    {{ page.date | longDate }}
