@@ -45,6 +45,7 @@ async function imageShortcode(src, alt, sizes = "100vw") {
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("static");
+  eleventyConfig.addPassthroughCopy("admin/config.yml");
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return format(dateObj, "dd LLL yyyy");
