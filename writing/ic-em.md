@@ -1,6 +1,6 @@
 ---
 layout: post
-title: IC -> EM
+title: Reflections on Engineering Management
 date: 2022-11-23T08:05:43.132Z
 tags:
   - blog
