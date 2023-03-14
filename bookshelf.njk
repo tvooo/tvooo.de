@@ -179,6 +179,14 @@ books:
       {% include 'book.njk' %}
     {%- endfor -%}
   </ul>
+  
+  <h2>2023 <small>({{books.y2023.length}})</small></h2>
+  <ul class="books">
+    {%- for book in books.y2023 -%}
+      {% include 'book.njk' %} 
+    {%- endfor -%}
+  </ul>
+  
   <h2>2022 <small>({{books.y2022.length}})</small></h2>
   <ul class="books">
     {%- for book in books.y2022 -%}
