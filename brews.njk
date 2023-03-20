@@ -1,0 +1,27 @@
+---
+layout: base
+title: Brews
+tags: [pages]
+date: Last Modified
+---
+
+<section>
+  <h1>Brews</h1>
+
+  <p>
+    If you've spent any amount of time with me in real life, you'll know that I really like coffee. Here are some recipes for brewing at home that I enjoy!
+  </p>
+
+  <ul class="brews">
+    {%- for brew in collections.brews -%}
+      <li class="brew">
+        <a href="{% if brew.data.href %}{{ brew.data.href }}{% else %}{{ brew.url }}{% endif %}">
+          <img src="{{brew.data.image}}" alt="Photo of a {{brew.data.brewer}}" />
+          <p class="brew-title"><strong>{{ brew.data.title }}</strong></p>
+          <p class="brew-ratio"><span>{{ brew.data.coffee }}</span> / <span>{{ brew.data.water }}</span> </p>
+       </a>
+      </li>
+    {%- endfor -%}
+  </ul>
+
+</section>
