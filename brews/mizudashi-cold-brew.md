@@ -1,12 +1,13 @@
 ---
 layout: brew
-title: Mizudashi Cold Brew
+title: Mizudashi Cold Brew by Kurasu
 tags: [brews]
 date: Last Modified
 brewer: Mizudashi
-coffee: 45g
+coffee: 50g
 water: 750g
 image: /static/images/cold-brew.jpg
+href: https://kurasu.kyoto/blogs/kurasu-journal/kurasu-s-recipe-for-cold-brew-coffee-hario-filter-in-cold-brew-coffee-bottle
 ---
 
 # Mizudashi Cold Brew

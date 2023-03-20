@@ -6,26 +6,19 @@ date: Last Modified
 ---
 
 <section>
-
-  {# <p>This is my <a href="https://nownownow.com/about">/now</a> page &mdash; if you have a personal website, you should get one too.</p> #}
-
   <h1>Brews</h1>
 
   <p>
-    If you've spend any amount of time with me in real life, you'll know that I really like coffee. Here are some recipes for brewing at home that I enjoy!
+    If you've spent any amount of time with me in real life, you'll know that I really like coffee. Here are some recipes for brewing at home that I enjoy!
   </p>
 
   <ul class="brews">
     {%- for brew in collections.brews -%}
-      <li class="book">
-        <a href="{{ brew.url }}">
-        {# <img src="{{ brew.data.image }}" /> #}
-        <img src="{{brew.data.image}}" alt="Photo of a {{brew.data.brewer}}" />
-        <p class="title"><strong>{{ brew.data.title }}</strong></p>
-        {# <p class="subtitle"><small>{{ book.subtitle }}</small></p> #}
-        {# <p class="author">{{ book.author }}</p> #}
-        {# <strong>{{ brew.data.brewer }}</strong> #}
-       <p class="author"><span>{{ brew.data.coffee }}</span> / <span>{{ brew.data.water }}</span> </p>
+      <li class="brew">
+        <a href="{% if brew.data.href %}{{ brew.data.href }}{% else %}{{ brew.url }}{% endif %}">
+          <img src="{{brew.data.image}}" alt="Photo of a {{brew.data.brewer}}" />
+          <p class="brew-title"><strong>{{ brew.data.title }}</strong></p>
+          <p class="brew-ratio"><span>{{ brew.data.coffee }}</span> / <span>{{ brew.data.water }}</span> </p>
        </a>
       </li>
     {%- endfor -%}

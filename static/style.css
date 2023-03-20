@@ -258,6 +258,18 @@ h2[content="Table of contents"] {
   padding: 0;
 }
 
+.brew img {
+  margin-bottom: 0.5rem;
+}
+
+.brew a {
+  border-bottom: none;
+}
+
+.brew-ratio {
+  margin: 0;
+}
+
 .title-image {
   margin: 0;
   /* margin-top: -8rem; */

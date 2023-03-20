@@ -11,8 +11,6 @@ image: '/static/images/v60.jpg'
 
 # V60 Daily Driver
 
-![](/static/images/v60.jpg)
-
 This recipe is based on a Kalita Wave recipe I've learned while doing a workshop at [Brew Lab](https://www.brewlabcoffee.co.uk/) in Edinburgh. It works just as well with a V60, and I use it with whatever brewer I so happen to fancy (and have filters for) at the time.
 
 ## Measurements
@@ -32,20 +30,20 @@ Brew time: ~3 minutes
 
 _Bloom_
 
-5. Add your grounds to the V60 and add double the amount of water, or ~40g.<br /> Let it bloom for 30 seconds
+5. Add your grounds to the V60 and add double the amount of water, or ~40g.<br /> Let it bloom for 30 seconds.
 
 _Slow phase_
 
-6. After the blooming phase, add water up to 100g and wait to 1:00
+6. After the bloom phase, add water up to 100g and wait to 1:00
 7. Add another 50g of water, wait to 1:30
 
 _Quick phase_
 
-Now we add 25g every 10 seconds.
+8. Now we add 25g every 10 seconds.
 
-At 2:00, we're at 225g
-At 2:30, we're at 300g and at the end of our brew.
+    At 2:00, we're at 225g<br />
+    At 2:30, we're at 300g and at the end of our brew.
 
 The rest of the water should be drained out of the coffee bed around the 3 minute mark.
 
-Enjoy! :coffee:
+## Enjoy! :coffee:
