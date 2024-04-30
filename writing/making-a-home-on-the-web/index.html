@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Making a Home on the Web - Tim von Oldenburg</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary meta tags -->
+    <meta name="description" content="Tim von Oldenburg is a frontend engineer based in Utrecht." />
+    <meta name="keywords" content="code, design, javascript, react, portfolio, ux" />
+    <meta name="title" content="Making a Home on the Web">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tvooo.de/writing/making-a-home-on-the-web/">
+    <meta property="og:title" content="Making a Home on the Web">
+    <meta property="og:description" content="Tim von Oldenburg is a frontend engineer based in Utrecht.">
+    <meta property="og:image" content="https://www.tvooo.de/images/NEe4XThVl4-1400.jpeg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.tvooo.de/writing/making-a-home-on-the-web/">
+    <meta property="twitter:title" content="Making a Home on the Web">
+    <meta property="twitter:description" content="Tim von Oldenburg is a frontend engineer based in Utrecht.">
+    <meta property="twitter:image" content="https://www.tvooo.de/images/NEe4XThVl4-1400.jpeg">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://plausible.io" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/static/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/static/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/static/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/static/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/static/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/static/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="/static/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/static/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/static/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="/static/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/static/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/static/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/static/mstile-310x310.png" />
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" href="https://www.tvooo.de/feed.xml" title="Tim von Oldenburg - Blog Feed" />
+    <!-- Plausible Analytics -->
+    <script async defer data-domain="tvooo.de" src="https://plausible.io/js/plausible.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Inlined Google Font loading -->
+    <style>
+    /* cyrillic-ext */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizYRExUiTo99u79D0e0ysmIAjcQ-woy.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizYRExUiTo99u79D0e0w8mIAjcQ-woy.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizYRExUiTo99u79D0e0ycmIAjcQ-woy.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizYRExUiTo99u79D0e0x8mIAjcQ-w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizaRExUiTo99u79D0-ExcOPIDUg-g.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizaRExUiTo99u79D0aExcOPIDUg-g.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizaRExUiTo99u79D0yExcOPIDUg-g.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizaRExUiTo99u79D0KExcOPIDU.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizfRExUiTo99u79B_mh0OOtLR8a8zILig.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizfRExUiTo99u79B_mh0OqtLR8a8zILig.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizfRExUiTo99u79B_mh0OCtLR8a8zILig.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizfRExUiTo99u79B_mh0O6tLR8a8zI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+    </style>
+    
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Main">
+        <div role="banner">
+          <a href="/">
+          <div class="blob" role="presentation"></div>
+          </a>
+          <!--<a href="/" class="">Tim von Oldenburg</a>-->
+        </div>
+        <ul><li >
+              <a href="/now/">Now</a>
+            </li><li >
+              <a href="/about/">About</a>
+            </li><li >
+              <a href="/bookshelf/">Bookshelf</a>
+            </li><li >
+              <a href="/brews/">Brews</a>
+            </li></ul>
+      </nav>
+    </header>
+    <main>
+      
+<section class="article">
+   <figure class="title-image">
+      <picture>
+      <source type="image/webp" srcset="/images/NEe4XThVl4-350.webp 350w, /images/NEe4XThVl4-700.webp 700w, /images/NEe4XThVl4-1400.webp 1400w" sizes="(min-width: 30em) 50vw, 100vw">
+  <source type="image/jpeg" srcset="/images/NEe4XThVl4-350.jpeg 350w, /images/NEe4XThVl4-700.jpeg 700w, /images/NEe4XThVl4-1400.jpeg 1400w" sizes="(min-width: 30em) 50vw, 100vw">
+      <img
+        src="/images/NEe4XThVl4-350.jpeg"
+        alt="A hermit crab walking in its shell across the sand"
+        loading="lazy"
+        decoding="async">
+    </picture>
+      <figcaption>A hermit crab must also find a new home when she outgrows the old one. Photo by <a href="https://unsplash.com/@jehuchristan">Jehu Christian</a> on <a href="https://unsplash.com">Unsplash</a>.</figcaption>
+   </figure>
+   <aside>
+   11 January 2021
+   </aside>
+   <h1>Making a Home on the Web</h1>
+   
+   <!-- Goal: welcome visitors to my site, explain what drove me to redo it, give some nerdy details. -->
+<p>Hej you, welcome to my personal website! :hugs:</p>
+<p>For the greater part of the last 6 years, this here was nothing more than a digital business card. It was ever so hastily updated every once in a while, any time I applied to a new job --- just to make sure there was nothing obviously embarassing on it.</p>
+<p>But in December 2020, while I was stuck in quarantine for more than a week, I got the sudden urge to make <em>something</em> out of this site.</p>
+<p>The last year has taken a toll on nearly every person I know, in some way or another. Things we took for granted --- things we assumed to be under our control --- turned out not to be under our control at all.</p>
+<p>In the isolation, and with very few local contacts after moving to the Netherlands in 2019, I've also been craving for community, both online and offline --- a sense of community I haven't found on Twitter or any of the other go-to &quot;social&quot; places on the web.</p>
+<p>And so in the midst of this, I've decided to carve out my own little space in the <a href="https://matthiasott.com/articles/into-the-personal-website-verse">universe of personal websites</a>. It's not a lot, but it's something I can control. It's a place where I can safely experiment, make mistakes, and battle my own perfectionism, on my own terms. I'm joining many people in a renaissance of the personal website, and I'm excited and curious where this is headed.</p>
+<p>On the technical side, I went with the times and dropped the likes of Gatsby and Next (which I value highly for other purposes) for <a href="https://www.11ty.dev/">Eleventy</a>, an old-fashioned (but not old!) static site generator. It's great. So much just works out of the box, and it was a strange pleasure to just write some HTML, some Markdown, and plain CSS.</p>
+<p>It's so fast, I even took the libery of adding some web fonts into the mix.</p>
+<p class="callout">There's a strange joy in the simple, especially if my daily work involves so much complexity.</p>
+<p>I am not sure yet what to make of this site. Evidently, what you are reading right now is something of a blog article. I've tried blogging multiple times, and it always took the same turn as going on a diet or visiting a gym: it did not stick for very long.</p>
+<p>As with any habit, I reckon it's because I didn't see the benefits of it quickly enough. This time, therefore, I will not force it, but will take it as it comes and chiefly try to blog <em>for myself</em>. Specifically, I will try to record the small things I've learned and made, and thus create a sort of journal I can return to.</p>
+<p>The topics that typically occupy my mind are in the realms of productivity, tooling, the intersection of engineering and design, and life as a developer outside of the technical; but there are personal things I'd like to share, too, <a href="/bookshelf/">such as the books I'm reading</a>.</p>
+<p>In the meantime, while I figure all this out, why don't you take a seat? Please make yourself at home. Bring friends. <em>Wil je een kopje koffie?</em></p>
+<p>:coffee:</p>
+
+</section>
+    </main>
+
+    <footer>
+      
+        <p>Copyright <strong>Tim von Oldenburg</strong></p>
+        
+      
+    </footer>
+  </body>
+  <script>
+    /* Remove previously installed Service Workers */
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      for(let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  </script>
+</html>
+

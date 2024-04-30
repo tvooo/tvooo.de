@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Tim von Oldenburg</title>
+  
+  <link href="https://www.tvooo.de/feed.xml" rel="self"/>
+  <link href="https://www.tvooo.de/"/>
+  <updated>2022-08-09T00:00:00Z</updated>
+  <id>https://www.tvooo.de/</id>
+  <author>
+    <name>Tim von Oldenburg</name>
+    <email>hej@tvooo.de</email>
+  </author>
+  
+  <entry>
+    <title>TIL of espanso, a cross-platform text expander</title>
+    <link href="https://www.tvooo.de/til/espanso/"/>
+    <updated>2020-12-23T00:00:00Z</updated>
+    <id>https://www.tvooo.de/til/espanso/</id>
+    <content type="html">&lt;p&gt;If you&#39;re on a Mac, you may be familiar with &lt;a href=&quot;https://textexpander.com/&quot;&gt;TextExpander&lt;/a&gt;. It&#39;s a small program that allows you to type a shortcut and then automatically replace it with content you previously defined.&lt;/p&gt;
+&lt;p&gt;You can use it to insert the current date, your address, an email response, or simply expand common abbreviations.&lt;/p&gt;
+&lt;p&gt;When I was using a Mac for work, I never invested in TextExpander, as I&#39;m using Linux in my personal life. But today I learned there is a similar program called &lt;a href=&quot;https://espanso.org/&quot;&gt;espanso&lt;/a&gt;. It&#39;s open source and cross-platform, and worked great on a first try.&lt;/p&gt;
+&lt;p&gt;If you use multiple computers, like I do, you can synchronise your config and custom abbreviations the way you sync your dotfiles, for example using Git or Dropbox.&lt;/p&gt;
+&lt;p&gt;:writing_hand:&lt;/p&gt;
+&lt;p&gt;*[TIL]: Today I learned&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>TIL that Feedbin is also a Read Later service</title>
+    <link href="https://www.tvooo.de/til/feedbin-read-later/"/>
+    <updated>2021-01-04T00:00:00Z</updated>
+    <id>https://www.tvooo.de/til/feedbin-read-later/</id>
+    <content type="html">&lt;p&gt;I&#39;m always trying to get a better grip on how I store and consume online content. The trinity of bookmarks, feeds, and &amp;quot;read later&amp;quot; content never made much sense to me, because the lines are so blurry --- a topic worth its own blog post.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://feedbin.com/&quot;&gt;Feedbin&lt;/a&gt; is the only RSS reader that I ever paid for (it&#39;s that good). But when I got interested in self-hosting, I played with &lt;a href=&quot;https://miniflux.app/index.html&quot;&gt;miniflux&lt;/a&gt; and shortly after stopped using RSS altogether. Life moves on.&lt;/p&gt;
+&lt;p&gt;Today, however, I learned that Feedbin supports sending articles to it, &lt;a href=&quot;https://feedbin.com/blog/2019/08/20/save-webpages-to-read-later/&quot;&gt;and has apparently done so for a while&lt;/a&gt;. This way it not only acts as an RSS reader with support for email newsletters, but &lt;em&gt;also&lt;/em&gt; as a rudimentary Read Later service, like Pocket or Instapaper.&lt;/p&gt;
+&lt;p&gt;This is great! For me, the opportunity to consolidate two tools into one outweighs the benefits a standalone app like Pocket offers. I may just get into RSS again.&lt;/p&gt;
+&lt;p&gt;:books:&lt;/p&gt;
+&lt;p&gt;*[RSS]: Really Simple Syndication
+*[TIL]: Today I learned&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Making a Home on the Web</title>
+    <link href="https://www.tvooo.de/writing/making-a-home-on-the-web/"/>
+    <updated>2021-01-11T00:00:00Z</updated>
+    <id>https://www.tvooo.de/writing/making-a-home-on-the-web/</id>
+    <content type="html">&lt;!-- Goal: welcome visitors to my site, explain what drove me to redo it, give some nerdy details. --&gt;
+&lt;p&gt;Hej you, welcome to my personal website! :hugs:&lt;/p&gt;
+&lt;p&gt;For the greater part of the last 6 years, this here was nothing more than a digital business card. It was ever so hastily updated every once in a while, any time I applied to a new job --- just to make sure there was nothing obviously embarassing on it.&lt;/p&gt;
+&lt;p&gt;But in December 2020, while I was stuck in quarantine for more than a week, I got the sudden urge to make &lt;em&gt;something&lt;/em&gt; out of this site.&lt;/p&gt;
+&lt;p&gt;The last year has taken a toll on nearly every person I know, in some way or another. Things we took for granted --- things we assumed to be under our control --- turned out not to be under our control at all.&lt;/p&gt;
+&lt;p&gt;In the isolation, and with very few local contacts after moving to the Netherlands in 2019, I&#39;ve also been craving for community, both online and offline --- a sense of community I haven&#39;t found on Twitter or any of the other go-to &amp;quot;social&amp;quot; places on the web.&lt;/p&gt;
+&lt;p&gt;And so in the midst of this, I&#39;ve decided to carve out my own little space in the &lt;a href=&quot;https://matthiasott.com/articles/into-the-personal-website-verse&quot;&gt;universe of personal websites&lt;/a&gt;. It&#39;s not a lot, but it&#39;s something I can control. It&#39;s a place where I can safely experiment, make mistakes, and battle my own perfectionism, on my own terms. I&#39;m joining many people in a renaissance of the personal website, and I&#39;m excited and curious where this is headed.&lt;/p&gt;
+&lt;p&gt;On the technical side, I went with the times and dropped the likes of Gatsby and Next (which I value highly for other purposes) for &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt;, an old-fashioned (but not old!) static site generator. It&#39;s great. So much just works out of the box, and it was a strange pleasure to just write some HTML, some Markdown, and plain CSS.&lt;/p&gt;
+&lt;p&gt;It&#39;s so fast, I even took the libery of adding some web fonts into the mix.&lt;/p&gt;
+&lt;p class=&quot;callout&quot;&gt;There&#39;s a strange joy in the simple, especially if my daily work involves so much complexity.&lt;/p&gt;
+&lt;p&gt;I am not sure yet what to make of this site. Evidently, what you are reading right now is something of a blog article. I&#39;ve tried blogging multiple times, and it always took the same turn as going on a diet or visiting a gym: it did not stick for very long.&lt;/p&gt;
+&lt;p&gt;As with any habit, I reckon it&#39;s because I didn&#39;t see the benefits of it quickly enough. This time, therefore, I will not force it, but will take it as it comes and chiefly try to blog &lt;em&gt;for myself&lt;/em&gt;. Specifically, I will try to record the small things I&#39;ve learned and made, and thus create a sort of journal I can return to.&lt;/p&gt;
+&lt;p&gt;The topics that typically occupy my mind are in the realms of productivity, tooling, the intersection of engineering and design, and life as a developer outside of the technical; but there are personal things I&#39;d like to share, too, &lt;a href=&quot;https://www.tvooo.de/bookshelf/&quot;&gt;such as the books I&#39;m reading&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In the meantime, while I figure all this out, why don&#39;t you take a seat? Please make yourself at home. Bring friends. &lt;em&gt;Wil je een kopje koffie?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;:coffee:&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>TIL how to test Dark Mode in Firefox</title>
+    <link href="https://www.tvooo.de/til/firefox-dark-mode/"/>
+    <updated>2021-01-21T00:00:00Z</updated>
+    <id>https://www.tvooo.de/til/firefox-dark-mode/</id>
+    <content type="html">&lt;p&gt;I have recently considered implementing a &lt;em&gt;dark mode&lt;/em&gt; for this site. Many websites use a toggle switch to activate an alternative color scheme, but there is also a media query that respects the user&#39;s OS settings. A nice way to use it is to overwrite your CSS variables:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #f8f8f8; // bright
+    --color-bg: #000e1a;   // dark
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, how can I test this? The Firefox Developer Tools have a &lt;em&gt;Responsive Design Mode&lt;/em&gt; that allows you to influence which media queries apply for the viewport, but I could not find anything about the preferred color scheme.&lt;/p&gt;
+&lt;p&gt;The solution is built right into the Properties panel of the Developer Tools&#39; Inspector tab; it&#39;s just (as of Firefox 84) &lt;a href=&quot;https://discourse.mozilla.org/t/how-to-test-preferred-color-scheme-dark-mode-with-firefox/40769/4&quot;&gt;hidden behind a config flag&lt;/a&gt;. To enable this feature, you have to navigate to &lt;code&gt;about:config&lt;/code&gt; and set the value for &lt;code&gt;devtools.inspector.color-scheme-simulation.enabled&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.tvooo.de/static/images/aboutconfig.png&quot; alt=&quot;Screenshot of Firefox Advanced Preferences with the correct value set&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;If you then open (or re-open, if it was already opened) the Developer Tools, you will see a new icon in the Properties panel, right where you can also toggle print simulation:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.tvooo.de/static/images/devtools.png&quot; alt=&quot;Screenshot of Firefox Developer Tools with a toggle to set &amp;quot;prefers-color-scheme: dark&amp;quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Happy developing!&lt;/p&gt;
+&lt;p&gt;:last_quarter_moon:&lt;/p&gt;
+&lt;p&gt;*[TIL]: Today I learned
+*[OS]: Operating System&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>TIL how to edit past Git commits</title>
+    <link href="https://www.tvooo.de/til/git-amend-past-commits/"/>
+    <updated>2021-10-04T00:00:00Z</updated>
+    <id>https://www.tvooo.de/til/git-amend-past-commits/</id>
+    <content type="html">&lt;p&gt;When making code changes in Git, I often forget something or notice a typo slightly too late.&lt;/p&gt;
+&lt;p&gt;Most frequently, I want to improve my last commit message. In those cases, I can easily amend the commit:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git commit --amend
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sometimes, however, I&#39;d like to do the same for a commit that is &lt;em&gt;further in the past&lt;/em&gt;. Or maybe I want to edit multiple commit messages at once. For this, we can make use of interactive rebasing:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git rebase -i HEAD~N
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;(You can address the earliest commit also by its SHA, but I like the &lt;code&gt;HEAD~N&lt;/code&gt; syntax, as I most often think of it in terms of &amp;quot;I need to edit the 3 last commits.&amp;quot;)&lt;/p&gt;
+&lt;p&gt;When it&#39;s just about fixing typos in commit messages, you can rely on the &lt;code&gt;reword&lt;/code&gt; command. For editing the commit contents, use &lt;code&gt;edit&lt;/code&gt;, and if you want to keep a commit as-is, use &lt;code&gt;pick&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Today I had to do this on already merged changes and noticed that the merge commit went missing after the rebase. It turns out that you can opt to preserve merge commits by passing the &lt;code&gt;-r&lt;/code&gt; flag:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git rebase -r -i HEAD~N
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For more details, check out &lt;a href=&quot;https://mtyurt.net/post/2019/git-rebase-merges-option.html&quot;&gt;this article by Tarık Yurt&lt;/a&gt;, which contains great illustrations of the process with and without the &lt;code&gt;-r&lt;/code&gt; flag.&lt;/p&gt;
+&lt;p&gt;Enjoy ravaging your commit history!&lt;/p&gt;
+&lt;p&gt;:boom:&lt;/p&gt;
+&lt;p&gt;*[TIL]: Today I learned&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>TIL about distinct (or opaque) types</title>
+    <link href="https://www.tvooo.de/til/distinct-opaque-types/"/>
+    <updated>2021-12-21T00:00:00Z</updated>
+    <id>https://www.tvooo.de/til/distinct-opaque-types/</id>
+    <content type="html">&lt;p&gt;In TypeScript, type aliases are just names for another type, for example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;type CustomerId = number;
+type OrderId = number;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Because both are numbers, TypeScript treats them as compatible, interchangeable, or &lt;em&gt;transparent&lt;/em&gt;. You could have a function that takes a &lt;code&gt;CustomerId&lt;/code&gt; and pass it an &lt;code&gt;OrderId&lt;/code&gt; instead, and TypeScript would not complain.&lt;/p&gt;
+&lt;p&gt;However, semantically this makes little sense. They may both be &lt;em&gt;represented&lt;/em&gt; numbers, but they are two different types. In the domain we&#39;re modeling, they are &lt;em&gt;distinct&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;I&#39;ve learned this through watching &lt;a href=&quot;https://www.youtube.com/watch?v=2JB1_e5wZmU&quot;&gt;Scott Wlaschin&#39;s talk &amp;quot;Domain Modeling Made Functional&amp;quot;&lt;/a&gt;. Scott uses F#, where you can &lt;em&gt;wrap&lt;/em&gt; a type to make it distinct.&lt;/p&gt;
+&lt;p&gt;Trying to find out how this would work in TypeScript, I found &lt;a href=&quot;https://codemix.com/opaque-types-in-javascript/&quot;&gt;this blog post by Charles Pick&lt;/a&gt; from 2017 --- and it seems like TypeScript still does not have any native support for opaque types.&lt;/p&gt;
+&lt;p&gt;And thus for TypeScript to recognize two types as incompatible, they need to be &lt;em&gt;structurally different&lt;/em&gt;. Charles&#39; suggestion, therefore, is to use intersections that add a unique property to your base type, effectively making it opaque.&lt;/p&gt;
+&lt;p&gt;But if I&#39;m adding a property... does this work for primitives?&lt;/p&gt;
+&lt;p&gt;It does! TypeScript seems to have no issues with intersections between a number and an object type :man_shrugging:. The secret is that we&#39;re not &lt;em&gt;actually&lt;/em&gt; adding the property to the values we&#39;re storing; we&#39;re just adding them to the type and casting the primitive to our new distinct one.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;type CustomerId = number &amp;amp; { _type: &#39;CustomerId&#39; };
+type OrderId = number &amp;amp; { _type: &#39;OrderId&#39; };
+
+const makeCustomerId = (id: number) =&amp;gt; id as CustomerId;
+const makeOrderId = (id: number) =&amp;gt; id as OrderId;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In this example, the &lt;code&gt;CustomerId&lt;/code&gt; and &lt;code&gt;OrderId&lt;/code&gt; types are no longer compatible, and once a primitive number is cast to either, it won&#39;t be accepted where the other is expected.&lt;/p&gt;
+&lt;p&gt;The downside is that we explicitly need to &lt;em&gt;create&lt;/em&gt; or at least cast these values, but, as Scott mentions in his talk, this only needs to happen at the boundaries of your application --- following user input, or receiving data from a database or network request. The advantage here is that we can use the point of creation also as point of validation; making sure the values follow specific constraints.&lt;/p&gt;
+&lt;p&gt;Happy (static) typing!&lt;/p&gt;
+&lt;p&gt;:keyboard:&lt;/p&gt;
+&lt;p&gt;*[TIL]: Today I learned&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>TIL that horizontal scroll offsets are negative for right-to-left elements</title>
+    <link href="https://www.tvooo.de/til/rtl-scroll-offset/"/>
+    <updated>2022-03-16T00:00:00Z</updated>
+    <id>https://www.tvooo.de/til/rtl-scroll-offset/</id>
+    <content type="html">&lt;p&gt;From &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft&quot;&gt;MDN&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If the element&#39;s &lt;code&gt;direction&lt;/code&gt; is &lt;code&gt;rtl&lt;/code&gt; (right-to-left), then &lt;code&gt;scrollLeft&lt;/code&gt; is 0 when the scrollbar is at its rightmost position (at the start of the scrolled content), and then increasingly negative as you scroll towards the end of the content.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In retrospect, this seems logical --- given the many CSS and JS APIs similarly named without regard for bidirectionality, such as &lt;code&gt;margin-left&lt;/code&gt;. What did I expect, &lt;code&gt;scrollRight&lt;/code&gt;? But it still tripped me up when fixing the RTL behaviour of a component in our Design System at work.&lt;/p&gt;
+&lt;p&gt;For scrollable content, we show a shadow to indicate that &amp;quot;there&#39;s more content&amp;quot; in a certain direction when you&#39;re not in the base scroll position --- a fairly common pattern, given that many modern browsers and operating systems (especially touch-focused) don&#39;t show scrollbars anymore at rest. However, in RTL mode our shadows were messed up.&lt;/p&gt;
+&lt;p&gt;Turns out we were using the &lt;code&gt;scrollLeft&lt;/code&gt; property to decide when to show and hide the respective shadows to the left and right of our scollable container. Once we&#39;ve identified the issue, it was luckily an easy fix.&lt;/p&gt;
+&lt;p&gt;I&#39;m very glad more modern browser APIs are designed with RTL in mind, and reflect this in their naming. For example, it&#39;s &lt;code&gt;align-items: flex-start&lt;/code&gt;, not &lt;code&gt;align-items: left&lt;/code&gt;. (Granted, this is likely due to the way that Flexbox revolves around horizontal and vertical axes.) It&#39;s similar (I&#39;d argue, even better) in the Grid API.&lt;/p&gt;
+&lt;p&gt;Now let&#39;s make the web more welcoming by properly supporting RTL languages!&lt;/p&gt;
+&lt;p&gt;*[TIL]: Today I learned
+*[RTL]: Right-to-Left&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Returning to Scotland: Fort William and Edinburgh</title>
+    <link href="https://www.tvooo.de/writing/returning-to-scotland/"/>
+    <updated>2022-08-09T00:00:00Z</updated>
+    <id>https://www.tvooo.de/writing/returning-to-scotland/</id>
+    <content type="html">&lt;p&gt;&lt;s&gt;Earlier this month&lt;/s&gt; In May, my partner and I spent 10 days in Scotland. It&#39;s been the second time I&#39;ve been back since living there from 2015 to 2017, and the first time since Brexit came into effect.&lt;/p&gt;
+&lt;h2&gt;Getting there: Eurostar and Caledonian Sleeper&lt;/h2&gt;
+&lt;p&gt;My partner doesn&#39;t like to fly, and we both like trains, so we opted to take the Eurostar to London, followed by the Caledonian Sleeper to Fort William.&lt;/p&gt;
+&lt;p&gt;Equipped with way more buffer than necessary, we made our way to Rotterdam, only to wait for an hour in the Eurostar terminal, where dreams come to die. It&#39;s like an airport terminal, but without the shops and snacks and daytime beers to distract you from what is essentially a non-place. Next time, no buffer.&lt;/p&gt;
+&lt;p&gt;The Eurostar was certainly okay, but like with the Thalys, I don&#39;t understand how people can take such a long time to board; most ICE stops take 2 or 3 minutes and people get off and on just fine.&lt;/p&gt;
+&lt;p&gt;It was my first time on the Eurostar, and the channel tunnel was a bit of a disappointment. If you ever took the train from Copenhagen to Malmö and emerged in the middle of the Öresund strait, you know what I mean.&lt;/p&gt;
+&lt;p&gt;In London, we had about 4 hours to change stations, from St. Pancras to Euston. That&#39;s a few hundred meters. We used the time to have early dinner, relax in a park, and awkwardly wait for one hour at Euston because we &lt;em&gt;really&lt;/em&gt; didn&#39;t want to miss our train.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.tvooo.de/static/images/IMG_2529.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Boarding the Caledonian Sleeper was delightful; there are train conductors to greet you and find you on a list, then direct you to your carriage. It&#39;s not quite like The Canadian, but then again, it&#39;s also not a 5 day journey.&lt;/p&gt;
+&lt;p&gt;Boarding the Caledonian Sleep was a very different experience from the Dutch or German &amp;quot;just walk onto the platform and board any carriage&amp;quot;; even with sleeper trains like the ÖBB NightJet.&lt;/p&gt;
+&lt;h2&gt;Fort William &amp;amp; Spean Bridge&lt;/h2&gt;
+&lt;p&gt;Fort William greeted us with pouring rain, but it cleared up quickly. Scottish weather as I love it :)&lt;/p&gt;
+&lt;p&gt;View of Old Inverlochy Castle and a rail bridge:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.tvooo.de/static/images/IMG_2546.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Devil&#39;s Staircase:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.tvooo.de/static/images/devils.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Yes, we did take the Harry Potter train (the Jacobite steam train) to Glenfinnan viaduct!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.tvooo.de/static/images/IMG_2574.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;I had planned to walk up Ben Nevis, Scotland&#39;s highest Munro. However, I chickened out because I didn&#39;t feel prepared enough to do it on my own, so we spent the day hillwalking instead, which gave us actually nice &lt;em&gt;views&lt;/em&gt; of Ben Nevis.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.tvooo.de/static/images/image16.jpeg&quot; alt=&quot;View of Ben Nevis&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;And a view of Fort William from Cow Hill:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.tvooo.de/static/images/cow-hill.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;We spent two nights in Spean Bridge. In between, we took the coach to Laggan, walked one stage of the Great Glen Way to Fort Augustus. That part was really accessible, I&#39;d love to do the whole way soon.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.tvooo.de/static/images/IMG_2661.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;South end of Loch Ness:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.tvooo.de/static/images/IMG_2669.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;Edinburgh&lt;/h2&gt;
+&lt;p&gt;I never would have imagined how much I&#39;ve missed Edinburgh. We spent our days mostly seeing places we knew from our time there; cafes, restaurants, parks. We tried new places too. The weather was perfect. I didn&#39;t take many pictures, but here is one from Holyrood Park and one from the Royal Botanic Gardens.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.tvooo.de/static/images/holyrood-2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.tvooo.de/static/images/IMG_2682.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;Returning home: Train to Newcastle and the Newcastle-IJmuiden ferry&lt;/h2&gt;
+&lt;p&gt;While I loved the outbound journey with the Caledonian Sleeper, I don&#39;t think I&#39;ll take the ferry from Newcastle again. It&#39;s annoying and time-consuming to get to, and IJmuiden isn&#39;t Amsterdam city centre either.&lt;/p&gt;
+&lt;p&gt;I did find a surprisingly awesome cafe in Newcastle though! :coffee:&lt;/p&gt;
+</content>
+  </entry>
+</feed>

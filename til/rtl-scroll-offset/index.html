@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TIL that horizontal scroll offsets are negative for right-to-left elements - Tim von Oldenburg</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary meta tags -->
+    <meta name="description" content="Tim von Oldenburg is a frontend engineer based in Utrecht." />
+    <meta name="keywords" content="code, design, javascript, react, portfolio, ux" />
+    <meta name="title" content="TIL that horizontal scroll offsets are negative for right-to-left elements">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tvooo.de/til/rtl-scroll-offset/">
+    <meta property="og:title" content="TIL that horizontal scroll offsets are negative for right-to-left elements">
+    <meta property="og:description" content="Tim von Oldenburg is a frontend engineer based in Utrecht.">
+    <meta property="og:image" content="https://www.tvooo.de/static/share.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.tvooo.de/til/rtl-scroll-offset/">
+    <meta property="twitter:title" content="TIL that horizontal scroll offsets are negative for right-to-left elements">
+    <meta property="twitter:description" content="Tim von Oldenburg is a frontend engineer based in Utrecht.">
+    <meta property="twitter:image" content="https://www.tvooo.de/static/share.png">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://plausible.io" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/static/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/static/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/static/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/static/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/static/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/static/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="/static/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/static/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/static/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="/static/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/static/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/static/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/static/mstile-310x310.png" />
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" href="https://www.tvooo.de/feed.xml" title="Tim von Oldenburg - Blog Feed" />
+    <!-- Plausible Analytics -->
+    <script async defer data-domain="tvooo.de" src="https://plausible.io/js/plausible.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Inlined Google Font loading -->
+    <style>
+    /* cyrillic-ext */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizYRExUiTo99u79D0e0ysmIAjcQ-woy.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizYRExUiTo99u79D0e0w8mIAjcQ-woy.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizYRExUiTo99u79D0e0ycmIAjcQ-woy.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizYRExUiTo99u79D0e0x8mIAjcQ-w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizaRExUiTo99u79D0-ExcOPIDUg-g.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizaRExUiTo99u79D0aExcOPIDUg-g.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizaRExUiTo99u79D0yExcOPIDUg-g.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizaRExUiTo99u79D0KExcOPIDU.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizfRExUiTo99u79B_mh0OOtLR8a8zILig.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizfRExUiTo99u79B_mh0OqtLR8a8zILig.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizfRExUiTo99u79B_mh0OCtLR8a8zILig.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizfRExUiTo99u79B_mh0O6tLR8a8zI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+    </style>
+    
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Main">
+        <div role="banner">
+          <a href="/">
+          <div class="blob" role="presentation"></div>
+          </a>
+          <!--<a href="/" class="">Tim von Oldenburg</a>-->
+        </div>
+        <ul><li >
+              <a href="/now/">Now</a>
+            </li><li >
+              <a href="/about/">About</a>
+            </li><li >
+              <a href="/bookshelf/">Bookshelf</a>
+            </li><li >
+              <a href="/brews/">Brews</a>
+            </li></ul>
+      </nav>
+    </header>
+    <main>
+      
+<section class="til">
+    16 Mar 2022
+    <h1><abbr title="Today I Learned">TIL</abbr> that horizontal scroll offsets are negative for right-to-left elements</h1>
+    <p>From <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft">MDN</a>:</p>
+<blockquote>
+<p>If the element's <code>direction</code> is <code>rtl</code> (right-to-left), then <code>scrollLeft</code> is 0 when the scrollbar is at its rightmost position (at the start of the scrolled content), and then increasingly negative as you scroll towards the end of the content.</p>
+</blockquote>
+<p>In retrospect, this seems logical --- given the many CSS and JS APIs similarly named without regard for bidirectionality, such as <code>margin-left</code>. What did I expect, <code>scrollRight</code>? But it still tripped me up when fixing the RTL behaviour of a component in our Design System at work.</p>
+<p>For scrollable content, we show a shadow to indicate that &quot;there's more content&quot; in a certain direction when you're not in the base scroll position --- a fairly common pattern, given that many modern browsers and operating systems (especially touch-focused) don't show scrollbars anymore at rest. However, in RTL mode our shadows were messed up.</p>
+<p>Turns out we were using the <code>scrollLeft</code> property to decide when to show and hide the respective shadows to the left and right of our scollable container. Once we've identified the issue, it was luckily an easy fix.</p>
+<p>I'm very glad more modern browser APIs are designed with RTL in mind, and reflect this in their naming. For example, it's <code>align-items: flex-start</code>, not <code>align-items: left</code>. (Granted, this is likely due to the way that Flexbox revolves around horizontal and vertical axes.) It's similar (I'd argue, even better) in the Grid API.</p>
+<p>Now let's make the web more welcoming by properly supporting RTL languages!</p>
+<p>*[TIL]: Today I learned
+*[RTL]: Right-to-Left</p>
+
+</section>
+    </main>
+
+    <footer>
+      
+        <p>Copyright <strong>Tim von Oldenburg</strong></p>
+        
+      
+    </footer>
+  </body>
+  <script>
+    /* Remove previously installed Service Workers */
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      for(let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  </script>
+</html>
+
