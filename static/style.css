@@ -22,9 +22,9 @@
   );
 
   --margin-sides: 2rem;
-  --margin-vertical: 4rem;
+  --margin-vertical: 3rem;
 
-  --page-width: 1000px;
+  --page-width: 600px;
 }
 
 /*
@@ -40,7 +40,7 @@
   :root {
     --font-size: 130%;
     --margin-sides: 8rem;
-    --margin-vertical: 8rem;
+    --margin-vertical: 6rem;
   }
 }
 
@@ -49,7 +49,7 @@
   :root {
     --color-text: #f8f8f8;
     --color-bg: #000e1a;
-    --color-bg-alt: black;
+    --color-bg-alt: #000e1a;
   }
 } */
 
@@ -63,16 +63,15 @@ body {
   min-height: 100vh;
   margin: 0;
 
-  font-family: "PT Sans", sans-serif;
+  font-family: Petrona, "Fraunces", "PT Sans", sans-serif;
   font-size: var(--font-size);
   color: var(--color-text);
-  background: var(--color-bg-alt);
+  background: var(--color-bg);
 }
 
 main {
-  /* max-width: 840px; */
   margin: 0px var(--margin-sides);
-  padding: var(--margin-vertical) 0;
+  /* padding: var(--margin-vertical) 0; */
 }
 
 header,
@@ -83,9 +82,11 @@ footer {
 
 header nav {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 
 header ul {
@@ -94,10 +95,11 @@ header ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-direction: row;
 }
 
 header li {
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
   margin: 0 1em 0 0;
   font-weight: bold;
 }
@@ -105,7 +107,7 @@ header li:last-child {
   margin: 0;
 }
 [role="banner"] {
-  margin-right: 1em;
+  /* margin-right: 1em; */
 }
 
 footer {
@@ -113,15 +115,8 @@ footer {
   margin-top: auto;
 }
 
-footer div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
 footer p {
-  margin-right: 1em;
+  text-align: center;
 }
 
 header > *,
@@ -143,13 +138,20 @@ a {
 }
 a:hover,
 a.active,
-[aria-current="page"] a {
+[aria-current="page"] a 
+{
   border-color: var(--color-blue);
+}
+a.active, [aria-current="page"] {
+  /* border-color: transparent; */
+  /* background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=007ce07a); */
+    /* margin: -2px -6px;
+    padding: 2px 6px; */
 }
 
 p {
   /* max-width: 35rem; */
-  max-width: 40rem;
+  /* max-width: 40rem; */
   /* text-align: center; */
   /* margin-left: auto;
   margin-right: auto; */
@@ -160,9 +162,21 @@ p {
 p + p {
   margin-top: 1em;
 }
+p+ul,
+ul+p {
+  margin-top: 1.5em;
+}
 
 p, li {
   line-height: 1.4em;
+}
+
+ul {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style-type: disc;
 }
 
 img {
@@ -172,6 +186,7 @@ img {
 }
 li {
   max-width: 35rem;
+  
 }
 
 small {
@@ -192,7 +207,8 @@ footer a {
 }
 
 .intro {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .blob {
@@ -248,18 +264,14 @@ h2[content="Table of contents"] {
 }
 
 .brews {
-  display: grid;
+  /* display: grid; */
 
-  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-  column-gap: 2rem;
-  row-gap: 2rem;
+  /* grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); */
+  /* column-gap: 2rem; */
+  /* row-gap: 2rem; */
 
   list-style: none;
   padding: 0;
-}
-
-.brew img {
-  margin-bottom: 0.5rem;
 }
 
 .brew a {
@@ -286,16 +298,18 @@ h2[content="Table of contents"] {
 
 @media screen and (min-width: 1000px) {
   .title-image {
-    margin-top: calc(-1 * var(--margin-vertical));
+    /* margin-top: calc(-1 * var(--margin-vertical)); */
   }
   .title-image img {
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+    overflow: hidden;
   }
 }
 
 .title-image figcaption {
   font-style: italic;
-  margin: 0.5em;
+  margin: 0.5em 2em;
 }
 
 .article p,
@@ -305,7 +319,7 @@ h2[content="Table of contents"] {
 .article h2,
 .article h3,
 .article details {
-  max-width: 40rem;
+  /* max-width: 40rem; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -373,6 +387,26 @@ details {
   margin-bottom: 2rem;
 }
 
-.toc ol {
-  list-style-type: disc;
+.highlight {
+  background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=ffff43);
+  margin: -2px -6px;
+  padding: 2px 6px;
+}
+
+
+em {
+  background: url(/static/brush.svg);
+  font-style: normal;
+  /* font-style: italic;
+  font-weight: 600; */
+  /* background-color:#35eb93; */
+  /* background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=35eb939a); */
+  margin: -2px -6px;
+    padding: 2px 6px;
+  /* color: #666; */
+}
+
+p::first-line {
+  text-indent: 1em hanging;
+  padding-left: 1em
 }

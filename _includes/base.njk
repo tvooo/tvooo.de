@@ -57,6 +57,9 @@ baseurl: "https://www.tvooo.de"
     <script async defer data-domain="tvooo.de" src="https://plausible.io/js/plausible.js"></script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Inlined Google Font loading -->
     <style>
     /* cyrillic-ext */
@@ -169,13 +172,16 @@ baseurl: "https://www.tvooo.de"
 }
 
     </style>
+    
   </head>
   <body>
     <header>
       <nav aria-label="Main">
         <div role="banner">
+          <a href="/">
           <div class="blob" role="presentation"></div>
-          <a href="/" class="{% if "/" == page.url %}active{% endif %}">Tim von Oldenburg</a>
+          </a>
+          <!--<a href="/" class="{% if "/" == page.url %}active{% endif %}">Tim von Oldenburg</a>-->
         </div>
         <ul>
           {%- for p in collections.pages -%}
@@ -191,10 +197,10 @@ baseurl: "https://www.tvooo.de"
     </main>
 
     <footer>
-      <div>
-        <p>© Tim von Oldenburg • hej(at)tvooo.de</p>
-        <nav aria-label="Social Links"><a href="/">tvooo.de</a> • <a href="https://github.com/tvooo/">Github</a> • <a href="https://twitter.com/timvonoldenburg">Twitter</a></nav>
-      </div>
+      {# <div> #}
+        <p>Copyright <strong>Tim von Oldenburg</strong></p>
+        {# <nav aria-label="Social Links"><a href="/">tvooo.de</a> • <a href="https://github.com/tvooo/">Github</a> • <a href="https://twitter.com/timvonoldenburg">Twitter</a></nav> #}
+      {# </div> #}
     </footer>
   </body>
   <script>

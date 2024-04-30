@@ -2,7 +2,7 @@ const pluginTOC = require("eleventy-plugin-nesting-toc");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const Image = require("@11ty/eleventy-img");
 
-const format = require("date-fns/format");
+const {format} = require("date-fns");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAbbr = require("markdown-it-abbr");
@@ -55,15 +55,15 @@ module.exports = function (eleventyConfig) {
   });
 
   // Markdown
-  eleventyConfig.setLibrary(
-    "md",
-    markdownIt({ html: true, linkify: true, typographer: true })
-      .use(markdownItAnchor)
-      .use(markdownItAbbr)
-      .use(markdownItEmoji)
-      .use(markdownItDeflist)
-      .use(markdownItFootnote)
-  );
+  // eleventyConfig.setLibrary(
+  //   "md",
+  //   markdownIt({ html: true, linkify: true, typographer: true })
+  //     .use(markdownItAnchor)
+  //     .use(markdownItAbbr)
+  //     .use(markdownItEmoji)
+  //     .use(markdownItDeflist)
+  //     .use(markdownItFootnote)
+  // );
 
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginTOC, {
