@@ -69,13 +69,13 @@ baseurl: "https://www.tvooo.de"
           </a>
           <!--<a href="/" class="{% if "/" == page.url %}active{% endif %}">Tim von Oldenburg</a>-->
         </div>
-        <ul>
+        {# <ul>
           {%- for p in collections.pages -%}
             <li {% if p.url == page.url %}aria-current="page"{% endif %}>
               <a href="{{ p.url }}">{{ p.data.title }}</a>
             </li>
             {%- endfor -%}
-        </ul>
+        </ul> #}
       </nav>
     </header>
     <main>

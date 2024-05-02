@@ -1,12 +1,8 @@
-const pluginTOC = require("eleventy-plugin-nesting-toc");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const Image = require("@11ty/eleventy-img");
-
 const {format} = require("date-fns");
-const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAbbr = require("markdown-it-abbr");
-const markdownItEmoji = require("markdown-it-emoji");
+const {full: markdownItEmoji} = require("markdown-it-emoji");
 const markdownItDeflist = require("markdown-it-deflist");
 const markdownItFootnote = require("markdown-it-footnote");
 
@@ -45,7 +41,6 @@ async function imageShortcode(src, alt, sizes = "100vw") {
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("static");
-  eleventyConfig.addPassthroughCopy("admin/config.yml");
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return format(dateObj, "dd LLL yyyy");
@@ -55,22 +50,18 @@ module.exports = function (eleventyConfig) {
   });
 
   // Markdown
-  // eleventyConfig.setLibrary(
-  //   "md",
-  //   markdownIt({ html: true, linkify: true, typographer: true })
-  //     .use(markdownItAnchor)
-  //     .use(markdownItAbbr)
-  //     .use(markdownItEmoji)
-  //     .use(markdownItDeflist)
-  //     .use(markdownItFootnote)
-  // );
+  eleventyConfig.amendLibrary("md", (mdLib) =>
+    mdLib
+      .set({
+        typographer: true,
+      })
+      .use(markdownItEmoji)
+      .use(markdownItAbbr)
+      .use(markdownItDeflist)
+      .use(markdownItFootnote)
+  );
 
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginTOC, {
-    tags: ["h2", "h3", "h4"], // Which heading tags are selected (headings must each have an ID attribute)
-    wrapper: "nav", // Element to put around the root `ol`
-    wrapperClass: "toc", // Class for the element around the root `ol`
-  });
 
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
   eleventyConfig.addNunjucksAsyncFilter("imageUrl", function (url, callback) {
